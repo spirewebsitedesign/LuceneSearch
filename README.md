@@ -12,15 +12,32 @@ includes some views and pagination controls for the main search route
 
 you need to add these lines to the composer.json in the root of your project
 
-"repositories": [
-    {
-        "type": "vcs",
-        "url": "https://github.com/zendframework/ZendSearch"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/nclundsten/LuceneSearch"
-    }
+ "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "zendframework/ZendSearch",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/zendframework/ZendSearch",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "nclundsten/LuceneSearch",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/nclundsten/LuceneSearch",
+                    "type": "git",
+                    "reference": "origin/master"
+                }
+            }
+        }
+
 ],
 "require": {
     "zendframework/zendsearch" : "dev-master"
